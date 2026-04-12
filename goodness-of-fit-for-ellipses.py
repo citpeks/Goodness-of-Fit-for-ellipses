@@ -42,11 +42,9 @@ def ellipse_line_intersection(Xc, Yc, L, W, phi, theta):
     # A is the coefficient of t^2
     A = (x1_rot / a) ** 2 + (y1_rot / b) ** 2  
     # B is the coefficient of t
-    B = 2 * ((Xc * cos_phi + Yc * sin_phi - Xc * cos_phi - Yc * sin_phi) * x1_rot / a ** 2 + 
-             (Xc * sin_phi - Yc * cos_phi - Xc * sin_phi + Yc * cos_phi) * y1_rot / b ** 2)  
+    B = 0
     # Constant term
-    C = ((Xc * cos_phi + Yc * sin_phi - Xc * cos_phi - Yc * sin_phi) ** 2 / a ** 2 +
-         (Xc * sin_phi - Yc * cos_phi - Xc * sin_phi + Yc * cos_phi) ** 2 / b ** 2) - 1  
+    C = - 1  
     
     # Solve the quadratic equation At^2 + Bt + C = 0
     discriminant = B ** 2 - 4 * A * C
